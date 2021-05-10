@@ -1,0 +1,11 @@
+.Details {
+  composes: ChosenWell from './index.module.css';
+}
+
+.Row {
+  composes: Row from './index.module.css';
+}
+
+.Field > p {
+  color: rgba(0, 0, 0, 0.8);
+}

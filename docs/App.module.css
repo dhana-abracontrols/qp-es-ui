@@ -1,0 +1,45 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #091d28;
+  color: white;
+}
+
+.Header > div {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header > div > h1 {
+  font-size: 1.2rem;
+}
+
+.Main {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.Main > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+}
+
+.Main > section > input {
+  font-size: 0.8em;
+  text-align: center;
+  width: 700px;
+}
+
+.Main > section > p {
+  margin-right: 25px;
+}

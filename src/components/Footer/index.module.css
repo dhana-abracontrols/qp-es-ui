@@ -1,0 +1,22 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.60);
+  font-size: 12px;
+}
+
+.Tag {
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  color: rgba(0, 0, 0, 0.40);
+}
+
+.Tag a {
+  color: #7493A0;
+}

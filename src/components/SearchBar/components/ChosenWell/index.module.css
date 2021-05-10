@@ -1,0 +1,25 @@
+.ChosenWell {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 0 8px;
+}
+
+.Row:last-child {
+  margin: 0;
+}
+
+.Row > div:nth-child(2n) {
+  text-align: right;
+}
+
+.Field > p {
+  color: rgba(0, 0, 0, 0.8);
+}

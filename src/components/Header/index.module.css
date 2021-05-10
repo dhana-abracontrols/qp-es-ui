@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 16px;
+  background-color: #ff9f43;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.Header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+}

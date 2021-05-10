@@ -1,0 +1,42 @@
+.SearchBar {
+  margin: 20px;
+  width : 400px;
+  height : 20px;
+}
+
+.ip2 {
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px; 
+    width: 400px;
+    height: 10px;
+    align-self: center;
+}
+
+ input[type=text]:focus {
+      border: 1px solid green;
+      outline: none;
+     }
+
+.gallery{
+    float: left;
+    width: 60%;
+    margin: 1%;
+}
+.gallery p {
+    word-break: break-all;
+}
+.pagination-bottom{
+    display: flex;
+    width: 700px;
+}
+.SearchOption {
+    display: flex;
+    flex-direction: column;
+    align-content : right;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    padding: 16px;
+  
+  }

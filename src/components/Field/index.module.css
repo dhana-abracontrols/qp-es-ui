@@ -1,0 +1,62 @@
+.Container {
+  /* Enables shrinking for ellipsis */
+  min-width: 0;
+}
+
+.Label {
+  margin: 0 0 5px;
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.LabelSmall {
+  composes: Label;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.LabelLarge {
+  composes: Label;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.Value {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.ValueSmall {
+  composes: Value;
+
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.ValueLarge {
+  composes: Value;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.Emphasis {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+.Ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.highlighted {
+  background-color: #ffeaa7;
+  color: #e17055;
+  font-weight: bolder;
+  box-shadow: -3px 0 0 #ffeaa7, 3px 0 0 #ffeaa7; 
+}

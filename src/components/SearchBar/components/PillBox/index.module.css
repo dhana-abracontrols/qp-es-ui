@@ -1,0 +1,66 @@
+.PillBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Canadian Provinces, LTR, loosely by football team colors */
+.AB {
+  color: #000;
+  background-color: #E57373;
+}
+.BC {
+  color: #000;
+  background-color: #FFB74D;
+}
+.SK {
+  color: #000;
+  background-color: #81C784;
+}
+.MB {
+  color: #fff;
+  background-color: #7986CB;
+}
+.TX{
+  color: rgb(29, 30, 100);
+  background-color: rgb(207, 49, 49);
+}
+.ND{
+  color : #FFC72A;
+  background-color : #0A5640
+}
+.OK{
+  color : #841617;
+  background-color : #df9e13
+}
+
+.CO{
+  color : #000;
+  background-color : #CFB87C
+}
+/* Well Direction */
+.HZ {
+  color: #fff;
+  background-color: #03A9F4;
+}
+.VT {
+  color: #fff;
+  background-color: #00BCD4;
+}
+.DIR {
+  color: #000;
+  background-color: #FFEB3B;
+}
+.SLT {
+  color: #000;
+  background-color: #FFC107;
+}
+
+/* Latest Well? */
+.Latest {
+  color: #000;
+  background-color: #8BC34A;
+}
+.Historical {
+  color: #000;
+  background-color: #FF5722;
+}

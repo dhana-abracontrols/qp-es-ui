@@ -1,0 +1,12 @@
+.Button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  color: rgba(0, 0, 0, 0.80);
+  background-color: rgba(0, 0, 0, 0.20);
+  text-transform: uppercase;
+}
+
+.Button:hover {
+  background-color: rgba(0, 0, 0, 0.30);
+}

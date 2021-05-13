@@ -1,33 +1,32 @@
-import React, { Component } from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-
-class CustomDialog extends Component {
-    render(){
-  
-        return (
-        <Dialog  open={this.props.open}>
-            <DialogContent> 
-            {this.props.content}
-            </DialogContent>
-            
-            <DialogActions>
-                {this.props.action}
-            </DialogActions>
-        </Dialog>
-        );
+import Style from './index.module.css'
+class Modal extends React.Component {
+  render() {
+    // Render nothing if the "show" prop is false
+    if(!this.props.show) {
+      return null;
     }
-}
-  
-  CustomDialog.propTypes = {
-    onClose: PropTypes.func,
-    open: PropTypes.bool.isRequired,
-    selectedValue: PropTypes.string,
-  }
 
-  export default CustomDialog;
+    return (
+      <div className={Style.exactCenter}>
+        <div>       
+          <div className="chartModalHeader">{this.props.title}</div>
+          <div>{this.props.children}</div>
+          <div className="chartModalFooter">
+             {this.props.onClose ? (<button className="btn btn-default" id = 'modalClose' onClick={this.props.onClose}>Close </button>) : ''} 
+          </div>
+        
+        </div>
+      </div>
+    );
+  }
+}
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  show: PropTypes.bool,
+  children: PropTypes.node
+};
+
+export default Modal;

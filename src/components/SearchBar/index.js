@@ -9,7 +9,7 @@ import dataToExcel from '../../util/exportToExcel'
 //import AsyncSelect from 'react-select/async'
 import { SearchOption, ChosenWell, WellsFound } from './components'
 import ErrorDisplay from '../ErrorDisplay'
-import CustomDialog from '../Dialog/Dialog'
+import Modal from '../Dialog/Dialog'
 import Style from './index.module.css'
 import parse from '../../util/parse'
 import ReactTable from 'react-table-v6'
@@ -65,6 +65,7 @@ class SearchBar extends Component {
     this.reset = this.reset.bind(this)
     this.chosenWellHeader = this.chosenWellHeader.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
+    this.handleConfirmationOk = this.handleConfirmationOk.bind(this)
     
   }
 
@@ -114,7 +115,7 @@ class SearchBar extends Component {
     let parsedJson = await parse(chosenWell)
     console.log(parsedJson)
     let parsedObject = [{key : chosenWell.wellData.Region , value : parsedJson}]
-    let fileCreated = await dataToExcel(parsedObject)
+    let fileCreated =  await dataToExcel(parsedObject)
     if(fileCreated) {
       this.setState({confirmationModal : !this.state.confirmationModal})
     }
@@ -205,19 +206,14 @@ class SearchBar extends Component {
     if (well.uuid) {
       return showDetails
         ? <> <ChosenWell.Details well={Object.assign(well,{"search" : this.state.inputValue})} /> 
-            <CustomDialog 
-             open = {this.state.confirmationModal}
-             content = {this.state.confirmationMessage}
-             action = {<button variant="outlined" color='primary' onClick = {this.handleConfirmationOk.bind(this)}> Ok </button>}
-            />	
+            <Modal show = {this.state.confirmationModal}>
+              <div>
+                {this.state.confirmationMessage}
+              </div>
+              <button type='button' className='btn btn-danger'  onClick={this.handleConfirmationOk}> Ok </button>
+          </Modal>	
         </>
-        :<> <ChosenWell well={Object.assign(well,{"search" : this.state.inputValue})}/> 
-            <CustomDialog 
-             open = {this.state.confirmationModal}
-             content = {this.state.confirmationMessage}
-             action = {<button variant="outlined" color='primary' onClick = {this.handleConfirmationOk.bind(this)}> Ok </button>}
-            />	
-          </>
+        :<> <ChosenWell well={Object.assign(well,{"search" : this.state.inputValue})}/></>
     } else {
       return <>
        
@@ -230,11 +226,12 @@ class SearchBar extends Component {
           <br />
           <br />
           {this.showsuggestedwellstable()}
-          <CustomDialog 
-				    open = {this.state.confirmationModal}
-				    content = {this.state.confirmationMessage}
-				    action = {<button variant="outlined" color='primary' onClick = {this.handleConfirmationOk.bind(this)}> Ok </button>}
-				  />	
+          <Modal show = {this.state.confirmationModal}>
+              <div>
+                {this.state.confirmationMessage}
+              </div>
+              <button type='button' className='btn btn-danger'  onClick={this.handleConfirmationOk}> Ok </button>
+          </Modal>				    			
         {
           error &&
           <ErrorDisplay error={error} />

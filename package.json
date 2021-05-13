@@ -109,8 +109,8 @@
     "ie 11"
   ],
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
     "node-sass": "^5.0.0",
+    "react-dialog": "^1.0.2",
     "react-table": "^7.7.0",
     "react-table-v6": "^6.8.6",
     "yarn": "^1.22.10"

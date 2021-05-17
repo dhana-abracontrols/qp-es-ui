@@ -1,10 +1,13 @@
 import expandObject from './expandObject'
 import FetchWithTimeout from './FetchWithTimeout'
-import dataToExcel from './exportToExcel'
+import groupBy from './groupBy'
 import parse from './parse'
+import dataToExcel from './exportToExcel'
+
 export {
   expandObject,
   FetchWithTimeout,
-  dataToExcel,
-  parse
+  groupBy,
+  parse,
+  dataToExcel
 }

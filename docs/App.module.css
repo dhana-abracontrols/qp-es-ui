@@ -9,7 +9,7 @@
 
 .Header > div {
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +37,7 @@
 .Main > section > input {
   font-size: 0.8em;
   text-align: center;
-  width: 700px;
+  width: 300px;
 }
 
 .Main > section > p {

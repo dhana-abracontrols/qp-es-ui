@@ -12,13 +12,11 @@ const skipLabelRegExp = /^(?:next|prev|createddate)$/i
 const dateRegExp = /date/i
 
 const skipLabels = (label) => !skipLabelRegExp.test(label)
-const renderValue = (label, value = 'null',search) => dateRegExp.test(label)
-  ? {value : new Date(value).toUTCString() , query:search }
-  : {value : value.toString(), query:search}
+const renderValue = (label, value = 'null', search) => dateRegExp.test(label)
+  ? { value: new Date(value).toUTCString(), query: search }
+  : { value: value.toString(), query: search }
 
-const Details = ({ well: { wellData,search } }) => {
-  //const {search} = wellData
-  //console.log(wellData)
+const Details = ({ well: { wellData, search } }) => {
   delete wellData.q
   const fields = Object.keys(wellData)
     .filter(skipLabels)
@@ -48,13 +46,13 @@ const Details = ({ well: { wellData,search } }) => {
           leftLabel &&
           <Field className={Style.Field}
             label={startCase(leftLabel)}
-            value={renderValue(leftLabel, wellData[leftLabel],search)} />
+            value={renderValue(leftLabel, wellData[leftLabel], search)} />
         }
         {
           rightLabel &&
           <Field className={Style.Field}
             label={startCase(rightLabel)}
-            value={renderValue(rightLabel, wellData[rightLabel],search)} />
+            value={renderValue(rightLabel, wellData[rightLabel], search)} />
         }
       </div>
     )

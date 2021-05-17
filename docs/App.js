@@ -13,7 +13,7 @@ class App extends Component {
     super()
 
     // If in development, the API_KEY may be supplied from a .env file
-    // in qp-react-ui/.env
+    // in qp-es-ui/.env
     // API_KEY=API_KEY. If in production, API_KEY is set to ''
 
     // This allows devs to skip copy pasting a key into the box every reload.

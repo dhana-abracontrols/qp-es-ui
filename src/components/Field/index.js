@@ -1,4 +1,4 @@
-// Query Park Inc. 2018
+// Query Park Inc. 2020
 
 // This component renders a field with a stylized label
 
@@ -8,14 +8,14 @@ import classNames from 'classnames'
 
 import Style from './index.module.css'
 
-const getHighlightedText = (text, highlight) =>{
+const getHighlightedText = (text, highlight) => {
   // Split on highlight term and include term into parts, ignore case
-  const parts = text.toString().split(new RegExp(`(${highlight})`, 'gi'));
+  const parts = text.toString().split(new RegExp(`(${highlight})`, 'gi'))
   return <span> { parts.map((part, i) =>
-      <span key={i} className={part.toLowerCase() === highlight.toLowerCase() ? Style.highlighted : '' }>
-          { part }
-      </span>)
-  } </span>;
+    <span key={i} className={part.toLowerCase() === highlight.toLowerCase() ? Style.highlighted : ''}>
+      { part }
+    </span>)
+  } </span>
 }
 
 const Field = ({
@@ -28,7 +28,6 @@ const Field = ({
   label,
   value
 }) => {
-  
   const ContainerStyle = classNames({
     [Style.Container]: labelEllipsis || valueEllipsis
   }, className)
@@ -45,11 +44,10 @@ const Field = ({
     [Style.Ellipsis]: valueEllipsis
   })
   return (
-    
     <div className={ContainerStyle}>
       <h2 className={LabelStyle}>{ label }</h2>
       {/* <p className={ValueStyle}>{ value }</p> */}
-      {value.value !== null ? getHighlightedText(value.value,value.query) : <p className={ValueStyle}>{ value.value }</p>}
+      {value.value !== null ? getHighlightedText(value.value, value.query) : <p className={ValueStyle}>{ value.value }</p>}
     </div>
   )
 }

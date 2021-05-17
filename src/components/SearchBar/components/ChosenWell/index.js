@@ -15,24 +15,7 @@ import Pillbox from '../PillBox'
 import Style from './index.module.css'
 
 const ChosenWell = ({ well }) => {
-  const { subheader, govId, surfaceLocation, owner,search } = well
-
-  const subHeaderValue = {
-    value : subheader.value ? subheader.value : null,
-    query : search
-  }
-  const surfaceLocationValue = {
-    value : surfaceLocation.value ? surfaceLocation.value : null,
-    query : search
-  }
-  const govIdValue = {
-    value : govId.value ? govId.value : null,
-    query : search
-  }
-  const ownerValue = {
-    value : owner.value ? owner.value : null,
-    query : search
-  }
+  const { subheader, govId, surfaceLocation, owner } = well
 
   return (
     <div className={Style.ChosenWell}>
@@ -40,21 +23,21 @@ const ChosenWell = ({ well }) => {
         <Field large
           className={Style.Field}
           label={subheader.label}
-          value={subHeaderValue} />
+          value={subheader.value} />
         <Field large
           className={Style.Field}
           label={govId.label}
-          value={govIdValue} />
+          value={govId.value} />
       </div>
       <div className={Style.Row}>
         <Field large
           className={Style.Field}
           label={surfaceLocation.label}
-          value={surfaceLocationValue} />
+          value={surfaceLocation.value} />
         <Field large
           className={Style.Field}
           label={owner.label}
-          value={ownerValue} />
+          value={owner.value} />
       </div>
       <div className={Style.Row}>
         <div /> { /* For flex justify-items: space-between */ }

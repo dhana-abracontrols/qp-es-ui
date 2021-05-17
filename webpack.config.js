@@ -25,7 +25,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: [/node_modules/],
         use: [
           {
@@ -34,7 +34,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -45,7 +45,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(css|svg|scss|sass)$/i,
+        test: /\.css$/i,
         use: [
           { loader: 'style-loader' },
           {
@@ -57,19 +57,6 @@ module.exports = {
                   ? '[hash:base64]'
                   : '[path][name]__[local]--[hash:base64:5]'
               }
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(scss|sass)$/i,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'sass-loader',
-            options: {
-              import: true,
-              
             }
           }
         ]

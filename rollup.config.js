@@ -21,7 +21,9 @@ const globals = {
 }
 // * This function excludes files from being included in the bundle
 const external = id => {
-  return  true
+  if (globals.hasOwnProperty(id)) {
+    return true
+  }
 }
 
 const babelOptions = () => ({
@@ -48,12 +50,7 @@ export default [
     plugins: [
       babel(babelOptions()),
       resolve(),
-      commonjs({
-        include: 'node_modules/**',
-        namedExports: {
-          'node_modules/react-is/index.js': ['isValidElementType']
-        }
-      }),
+      commonjs(),
       postcss({
         minimize: true,
         plugins: [ autoprefixer() ]

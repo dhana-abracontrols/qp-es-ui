@@ -12,14 +12,12 @@ const Footer = ({ children }) => (
     <div>
       { children }
     </div>
-    <br/>
-    <br/>
     <h6 className={Style.Tag}>
       { 'POWERED BY ' }
-      <a href='https://www.abracontrols.com'
+      <a href='https://www.querypark.com'
         rel='noopener noreferrer'
         target='_blank'>
-          Abra Controls Corp.
+          QUERY PARK INC.
       </a>
     </h6>
   </div>

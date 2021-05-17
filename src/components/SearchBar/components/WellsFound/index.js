@@ -1,4 +1,4 @@
-// Query Park Inc. 2021
+// Query Park Inc. 2018
 
 // This component renders the time it took to search for wells
 
@@ -9,7 +9,7 @@ import Style from './index.module.css'
 
 const WellsFound = ({
   json: { payload: {
-    totalwells: { length },
+    wells: { length },
     queryTime
   } }
 }) => <p className={Style.WellsFound}>

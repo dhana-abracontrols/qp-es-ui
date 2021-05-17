@@ -1,6 +1,6 @@
 {
   "name": "qp-es-ui",
-  "version": "3.0.0-alpha.2",
+  "version": "5.0.0-alpha.1",
   "description": "Query Park UI Components for React",
   "keywords": [
     "Component",
@@ -8,12 +8,12 @@
     "Query",
     "Park"
   ],
-  "author": "Dhana <dhana.rama@abracontrols.com>",
-  "license": "MIT",
+  "homepage": "https://github.com/QueryPark/UIKit#readme",
   "bugs": {
-    "url": "https://github.com/dhana-abracontrols/qp-es-ui/issues"
+    "url": "https://github.com/QueryPark/UIKit/issues"
   },
-  "homepage": "https://github.com/dhana-abracontrols/qp-es-ui#readme",
+  "license": "MIT",
+  "author": "Query Park Inc.",
   "files": [
     "dist",
     "src"
@@ -23,7 +23,7 @@
   "module": "dist/qp-es-ui.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhana-abracontrols/qp-es-ui.git"
+    "url": "git+https://github.com/QueryPark/UIKit.git"
   },
   "scripts": {
     "build": "nps build && bundlesize",
@@ -51,7 +51,7 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "babel-plugin-react-css-modules": "^5.2.6",
-    "babel-plugin-transform-postcss": "*",
+    "babel-plugin-transform-postcss": "^0.3.0",
     "bundlesize": "^0.18.0",
     "classnames": "^2.2.6",
     "copy-webpack-plugin": "^4.5.2",
@@ -75,8 +75,8 @@
     "lodash": "^4.17.15",
     "nps": "^5.9.3",
     "nps-utils": "^1.7.0",
-    "postcss": "*",
-    "postcss-modules": "*",
+    "postcss": "^7.0.17",
+    "postcss-modules": "^1.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -85,7 +85,7 @@
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.1.8",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-postcss-modules": "*",
+    "rollup-plugin-postcss-modules": "^2.0.1",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.1.1",
     "style-loader": "^1.0.0",
@@ -109,13 +109,7 @@
     "ie 11"
   ],
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "react-dialog": "^1.0.2",
-    "react-table": "^7.7.0",
-    "react-table-v6": "^6.8.6",
-    "yarn": "^1.22.10"
-  },
-  "directories": {
-    "doc": "docs"
+    "react-paginate": "^7.1.2",
+    "react-table-v6": "^6.8.6"
   }
 }
